@@ -12,7 +12,7 @@ Vue.use(VueRouter)
 	Cinemas,
 	{
 		path:'/*',
-		redirect:'/movies/nowp'
+		redirect:'/movies'
 	}
 ]
 

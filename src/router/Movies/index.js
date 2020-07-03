@@ -17,6 +17,10 @@ export default{
 		{
 			path:'willp',
 			component: () => import('@/components/Willp.vue')
+		},
+		{
+			path:'/movies',
+			redirect:'/movies/nowp'
 		}
 	]
 	

@@ -2,7 +2,7 @@
 	<div id="main">
 		<footer id="footer">
 			<ul>
-				<router-link tag="li" to="/movies/nowp">
+				<router-link tag="li" to="/movies">
 					<i class="iconfont icon-dianying"></i>
 					<p>电影</p>
 				</router-link>
