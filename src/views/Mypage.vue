@@ -1,12 +1,12 @@
 <template>
-	<div id="movies">
-		<h2>5555</h2>
+	<div id="mypage">
+		
 	</div>
 </template>
 
 <script>
 	export default{
-		name:'movies',
+		name:'mypage',
 		data(){
 			return{
 				
