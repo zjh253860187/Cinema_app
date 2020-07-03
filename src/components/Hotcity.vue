@@ -88,6 +88,11 @@
 <script>
 	export default{
 		name:'hotcity',
+		mounted(){
+			this.axios.get('/api/getLocation').then((res)=>{
+				console.log(res)
+			})
+		},
 		data(){
 			return{
 				
@@ -100,7 +105,7 @@
 #hotcity{margin-top: 50px;}
 #hhg{margin-bottom: 600px;}
 #content .city_body{height: 100% ;margin-top: 45px; display: flex; width:100%; position: fixed; top: 0; bottom: 0;}
-.city_body .city_list{ flex:1; overflow: auto; background: #FFF5F0;margin-bottom: 100px;}
+.city_body .city_list{ flex:1; overflow: auto; background: #FFF5F0;margin-bottom: 95px;margin-top: 45px;}
 .city_body .city_list::-webkit-scrollbar{
     background-color:transparent;
     width:0;
