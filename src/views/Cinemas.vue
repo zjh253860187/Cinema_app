@@ -1,19 +1,23 @@
 <template>
-  <div class="home">
-
+  <div class="cinemas">
+		
   </div>
 </template>
 
 <script>
-
-
 export default {
-  name: 'Home',
+  name: 'cinemas',
   data(){
 	  return{
 		  
 	  }
+  },
+  methods:{
+	  
   }
-
 }
 </script>
+
+<style scoped="less">
+	
+</style>
