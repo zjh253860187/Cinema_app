@@ -1,6 +1,5 @@
 <template>
-	<div id="mypage">
-		
+	<div id="mypage">	
 		<Headers title="登录"/>
 			<div id="content">
 				<div class="login_body">

@@ -117,7 +117,6 @@
 
 <style scoped="less">
 #nowp{margin-top: 45px;}
-#hhg{margin-bottom: 600px;}
 #content .movie_body{ flex:1; overflow:auto;}
 .movie_body ul{ margin:0 12px; overflow: hidden;}
 .movie_body ul li{ margin-top:12px; display: flex; align-items:center; border-bottom: 1px #e6e6e6 solid; padding-bottom: 10px;}
