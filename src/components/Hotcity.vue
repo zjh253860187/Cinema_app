@@ -89,9 +89,9 @@
 	export default{
 		name:'hotcity',
 		mounted(){
-			// this.axios.get('http://192.168.0.224:3005').then((res)=>{
-			// 	console.log(res)
-			// })
+			this.axios.get('/api/shoplist').then((res)=>{
+				console.log(res)
+			})
 		},
 		data(){
 			return{
