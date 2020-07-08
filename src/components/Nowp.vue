@@ -1,6 +1,6 @@
 <template>
-	<div id="nowp">	
 		<div class="movie_body">
+			<van-pull-refresh v-model="isLoading" @refresh="onRefresh" success-text="刷新成功">
 			<ul>
 				<li>
 					<div class="pic_show"><img src="images/movie_1.jpg"></div>
@@ -99,9 +99,8 @@
 					</div>
 				</li>
 			</ul>
+			</van-pull-refresh>
 		</div>
-		</div>
-	</div>
 </template>
 
 <script>
@@ -109,9 +108,16 @@
 		name:'nowp',
 		data(){
 			return{
-				
+				isLoading: false,
 			}
-		}
+		},
+		methods:{		
+			 onRefresh() {
+			       setTimeout(() => {
+			         this.isLoading = false;
+			       }, 1000)
+			     }
+			},			
 	}
 </script>
 
