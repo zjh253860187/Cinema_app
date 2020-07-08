@@ -47,8 +47,6 @@
 </script>
 
 <style scoped="less">
-#search{margin-top: 45px;}
-#hhg{margin-bottom: 600px;}
 #content .search_body{ flex:1; overflow:auto;}
 .search_body .search_input{ padding: 8px 10px; background-color: #f5f5f5; border-bottom: 1px solid #e5e5e5;}
 .search_body .search_input_wrapper{ padding: 0 10px; border: 1px solid #e6e6e6; border-radius: 5px; background-color: #fff; display: flex; line-height: 20px;}

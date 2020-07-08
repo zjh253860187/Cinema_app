@@ -1,6 +1,6 @@
 <template>
-	<div id="willh">
 		<div class="movie_body">
+			<van-pull-refresh v-model="isLoading" @refresh="onRefresh" success-text="刷新成功">
 			<ul>
 				<li>
 					<div class="pic_show"><img src="images/movie_1.jpg"></div>
@@ -99,9 +99,8 @@
 					</div>
 				</li>
 			</ul>
+			</van-pull-refresh>
 		</div>
-	</div>
-	</div>
 </template>
 
 <script>
@@ -109,15 +108,20 @@
 		name:'willh',
 		data(){
 			return{
-				
+				isLoading : false,
 			}
-		}
+		},
+		methods:{
+			onRefresh() {
+			      setTimeout(() => {
+			        this.isLoading = false;
+			      }, 1000)
+			    }
+		},
 	}
 </script>
 
 <style scoped="less">
-#willh{margin-top: 45px;}
-#hhg{margin-bottom: 600px;}	
 #content .movie_body{ flex:1; overflow:auto;}
 .movie_body ul{ margin:0 12px; overflow: hidden;}
 .movie_body ul li{ margin-top:12px; display: flex; align-items:center; border-bottom: 1px #e6e6e6 solid; padding-bottom: 10px;}

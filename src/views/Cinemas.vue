@@ -1,7 +1,7 @@
 <template>
-	<div id="cinemas">	
+	<div id="main">
+	<Headers title="电影院"/>
 	<div id="content">
-		<Headers title="电影院"/>
 			<div class="cinema_menu">
 				<div class="city_switch">
 					全城 <i class="iconfont icon-lower-triangle"></i>
@@ -13,8 +13,8 @@
 					特色 <i class="iconfont icon-lower-triangle"></i>
 				</div>
 			</div>			
-		<Tabbar/>
 		<div class="cinema_body">
+			<van-pull-refresh v-model="isLoading" @refresh="onRefresh" success-text="刷新成功">
 			<ul>
 				<li>
 					<div>
@@ -101,10 +101,11 @@
 					</div>
 				</li>
 			</ul>
+			</van-pull-refresh>
 		</div>
+		<Tabbar/>
 	</div>
-	</div>
-	</div>
+</div>
 </template>
 
 <script>
@@ -112,17 +113,23 @@
 		name:'cinemas',
 		data(){
 			return{
-				
+				isLoading: false,
 			}
-		}
+		},
+		methods:{
+			onRefresh() {
+			      setTimeout(() => {
+			        this.isLoading = false;
+			      }, 1000)
+			    }
+		},
 	}
 </script>
 
 <style scoped="less">
 #content .cinema_menu{ width: 100%; height: 45px; border-bottom:1px solid #e6e6e6; display: flex; justify-content:space-around; align-items:center; background:white;}
-.cinema_menu{position: fixed;top: 45px;}
 #content .cinema_body{ flex:1; overflow:auto;}
-.cinema_body ul{ padding:20px;margin-top: 45px;}
+.cinema_body ul{ padding:20px;}
 .cinema_body li{  border-bottom:1px solid #e6e6e6; margin-bottom: 20px;}
 .cinema_body div{ margin-bottom: 10px;}
 .cinema_body .q{ font-size: 11px; color:#f03d37;}

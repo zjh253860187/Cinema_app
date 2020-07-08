@@ -1,5 +1,4 @@
-<template>
-	<div id="hotcity">		
+<template>	
 		<div class="city_body">
 			<div class="city_list">
 				<div class="city_hot">
@@ -82,7 +81,6 @@
 				</ul>
 			</div>
 		</div>
-	</div>
 </template>
 
 <script>
@@ -102,9 +100,8 @@
 </script>
 
 <style scoped="less">
-#hotcity{margin-top: 50px;}
-#content .city_body{height: 100% ;margin-top: 45px; display: flex; width:100%; position: fixed; top: 0; bottom: 0;}
-.city_body .city_list{ flex:1; overflow: auto; background: #FFF5F0;margin-bottom: 95px;margin-top: 45px;}
+#content .city_body{margin-top: 45px; display: flex; width:100%; position: absolute; top: 0; bottom: 0;}
+.city_body .city_list{ flex:1; overflow: auto; background: #FFF5F0;}
 .city_body .city_list::-webkit-scrollbar{
     background-color:transparent;
     width:0;

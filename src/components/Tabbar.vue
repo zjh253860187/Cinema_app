@@ -1,5 +1,4 @@
 <template>
-	<div id="main">
 		<footer id="footer">
 			<ul>
 				<router-link tag="li" to="/movies">
@@ -16,7 +15,6 @@
 				</router-link>
 			</ul>
 		</footer>
-	</div>
 </template>
 
 <script>
