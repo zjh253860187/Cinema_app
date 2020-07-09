@@ -8,6 +8,8 @@ import Tabbar from '@/components/Tabbar.vue'
 import { PullRefresh } from 'vant'
 
 Vue.use(PullRefresh)
+Vue.component('Headers',Headers)
+Vue.component('Tabbar',Tabbar)
 
 
 
@@ -16,8 +18,6 @@ Vue.prototype.axios = axios
 
 Vue.config.productionTip = false
 
-Vue.component('Headers',Headers)
-Vue.component('Tabbar',Tabbar)
 
 new Vue({
   router,
